@@ -95,6 +95,7 @@ function Login() {
           }
 
           <button
+            data-testid='acess-btn'
             onClick={() => acessButtonClick()}
           >
             Acessar

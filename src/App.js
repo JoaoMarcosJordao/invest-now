@@ -5,12 +5,12 @@ import Login from './pages/Login'
 
 function App() {
   return (
-    <>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route path="/actions" component={Actions} />
-      </Switch>
-    </>
+
+    <Switch>
+      <Route exact path="/" component={Login} />
+      <Route path="/actions" component={Actions} />
+    </Switch>
+
   );
 }
 
