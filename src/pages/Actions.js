@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from '../components/Header';
+import ActionsAvailable from '../components/ActionsAvailable';
 
 function Actions () {
   return (
     <>
       <Header />
-      <h1>Essa é a Actions</h1>
+      <ActionsAvailable />
     </>
   )
 }
