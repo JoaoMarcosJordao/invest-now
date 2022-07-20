@@ -23,6 +23,7 @@ function MyActions() {
 
   return (
     <>
+    {console.log(myActions)}
       <table>
         <thead>
           <tr>
@@ -33,7 +34,7 @@ function MyActions() {
         </thead>
         <tbody>
           {myActions.map((action) => (
-            <tr key={action.index}>
+            <tr key={action.title}>
               <td>{action.title}</td>
               <td>{action.quantity}</td>
               <td>{action.price}</td>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import appContext from '../context/appContext';
 import Header from '../components/Header';
 import { Redirect } from 'react-router-dom';
@@ -22,7 +22,7 @@ function BuyOrSell() {
 
     const action = {
       title: tradeAction[0].title,
-      amount: quantity,
+      quantity,
       price: tradeAction[0].price
     }
 
