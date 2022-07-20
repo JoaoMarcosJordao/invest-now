@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import appContext from './appContext';
+import dataActions from '../actions';
 
 function Provider({ children }) {
-  const [action, setAction] = useState([]);
+  const [ actions, setActions ] = useState(dataActions);
+  const [ tradeAction, setTradection] = useState({});
+  const [myActions, setMyActions] = useState([]);
+
   const contextValue = {
-    action,
-    setAction,
+    myActions,
+    setMyActions,
+    actions,
+    setActions,
+    tradeAction,
+    setTradection,
   };
 
   return (

@@ -1,4 +1,4 @@
-const actions = [
+const dataActions = [
   {
     id:0,
     title: 'XPT3',
@@ -67,4 +67,4 @@ const actions = [
     },
 ];
 
-export default actions;
+export default dataActions;

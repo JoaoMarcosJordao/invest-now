@@ -1,32 +1,28 @@
-import React, { useContext } from 'react';
-import actionsData from '../actions';
+import React, { useContext, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import appContext from '../context/appContext';
 
 function ActionsAvailable() {
 
-  const {action, setAction} = useContext(appContext);
+  const [redirect, setRedirect] = useState(false);
+
+  const { actions, setTradection } = useContext(appContext);
 
   const buyBtn = (target) => {
 
     const { name } = target;
 
-    const filteredAction = actionsData.filter((action) => action.title === name);
+    const filteredAction = actions.filter((action) => action.title === name);
 
-    setAction(filteredAction);
+    setTradection(filteredAction);
 
+    setRedirect(true);
   };
-  
-  console.log(action);
 
   return (
     <>
       <article>
-        <h4>Minhas ações:</h4>
-        {/* {action.length === 0 && <span>Você ainda nâo possui ações.</span>} */}
-      </article>
-      <article>
         <h4>Disponíveis para investir:</h4>
-
         <table>
           <thead>
             <tr>
@@ -37,7 +33,7 @@ function ActionsAvailable() {
             </tr>
           </thead>
           <tbody>
-            {actionsData.map((action) => (
+            {actions.map((action) => (
               <tr key={action.id}>
                 <td>{action.title}</td>
                 <td>{action.amount}</td>
@@ -61,7 +57,11 @@ function ActionsAvailable() {
             ))}
           </tbody>
         </table>
-      </article></>
+      </article>
+      {
+        redirect && <Redirect push to='/buyorsell' />
+      }
+    </>
   )
 }
 
