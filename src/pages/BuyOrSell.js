@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 function BuyOrSell() {
   const [redirect, setRedirect] = useState(false);
   const [quantity, setQuantity] = useState(0);
-  const { tradeAction, setMyActions } = useContext(appContext);
+  const { tradeAction, myActions } = useContext(appContext);
 
   const returnBtn = () => {
     setRedirect(true);
@@ -18,17 +18,14 @@ function BuyOrSell() {
 
   const confirmBtn = () => {
 
-    let actions = [];
-
     const action = {
       title: tradeAction[0].title,
       quantity,
       price: tradeAction[0].price
     }
 
-    actions.push(action);
+    myActions.push(action);
 
-    setMyActions(actions);
    }
 
   return (

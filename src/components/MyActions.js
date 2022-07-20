@@ -23,7 +23,6 @@ function MyActions() {
 
   return (
     <>
-    {console.log(myActions)}
       <table>
         <thead>
           <tr>
