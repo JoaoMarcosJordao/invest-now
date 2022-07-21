@@ -42,6 +42,7 @@ function Deposit() {
 
       <div>
         <input
+          placeholder='Informe o valor'
           type='number'
           onChange={({ target }) => handleChange(target.value)}
         />
