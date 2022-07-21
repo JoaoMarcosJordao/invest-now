@@ -4,12 +4,12 @@ import appContext from '../context/appContext';
 
 
 function MyActions() {
-  const { myActions  } = useContext(appContext);
+  const { myActions } = useContext(appContext);
 
   const [redirect, setRedirect] = useState(false);
 
   const buyBtn = (target) => {
-    
+
 
     setRedirect(true);
   };
@@ -38,21 +38,21 @@ function MyActions() {
               <td>{action.quantity}</td>
               <td>{action.price}</td>
               <td>
-                  <button
-                    name={action.title}
-                    data-testid='buy-btn'
-                    onClick={({ target }) => buyBtn(target)}
-                  >
-                    C
-                  </button>
-                  <button
-                    name={action.title}
-                    data-testid='sell-btn'
-                    onClick={() => sellBtn()}
-                  >
-                    V
-                  </button>
-                </td>
+                <button
+                  name={action.title}
+                  data-testid='buy-btn'
+                  onClick={({ target }) => buyBtn(target)}
+                >
+                  C
+                </button>
+                <button
+                  name={action.title}
+                  data-testid='sell-btn'
+                  onClick={() => sellBtn()}
+                >
+                  V
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

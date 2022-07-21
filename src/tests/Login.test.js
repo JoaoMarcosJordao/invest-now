@@ -1,17 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import App from '../App';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router-dom';
 import renderWithRouter from './renderWithRouter';
 
 describe('Testando a página de Login', () => {
   it ('Verifica se na página de Login, possui o input para Email', () => {
-    render(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>
-    );
+    renderWithRouter(<App />)
 
     const inputEmail = screen.getByTestId('input-email');
 
@@ -19,9 +14,7 @@ describe('Testando a página de Login', () => {
   });
 
   it ('Verifica se na página de Login, possui o input para a Senha', () => {
-    render(<MemoryRouter>
-      <App />
-    </MemoryRouter>);
+    renderWithRouter(<App />)
 
     const inputPassowrd = screen.getByTestId('input-password');
 
@@ -29,9 +22,7 @@ describe('Testando a página de Login', () => {
   });
 
   it ('Verifica se na página de Login, possui o botao "Acessar"', () => {
-    render(<MemoryRouter>
-      <App />
-    </MemoryRouter>);
+    renderWithRouter(<App />)
 
     const acessBtn = screen.getByTestId('acess-btn')
 
