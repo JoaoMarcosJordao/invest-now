@@ -3,8 +3,8 @@ import appContext from './appContext';
 import dataActions from '../actions';
 
 function Provider({ children }) {
-  const [ actions, setActions ] = useState(dataActions);
-  const [ tradeAction, setTradection] = useState({});
+  const [actions, setActions] = useState(dataActions);
+  const [tradeAction, setTradection] = useState([{}]);
   const [myActions, setMyActions] = useState([]);
 
   const contextValue = {

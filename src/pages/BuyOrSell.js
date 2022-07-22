@@ -26,7 +26,7 @@ function BuyOrSell() {
 
     myActions.push(action);
 
-   }
+  }
 
   return (
     <>
@@ -41,7 +41,7 @@ function BuyOrSell() {
         </thead>
         <tbody>
           {tradeAction.map((action) => (
-            <tr key={action.id}>
+            <tr key={action.title}>
               <td>{action.title}</td>
               <td>{action.amount}</td>
               <td>{action.price}</td>
@@ -54,6 +54,7 @@ function BuyOrSell() {
         <label>
           Comprar:
           <input
+            data-testid='input-quantity-buy'
             onChange={({ target }) => quantityHandler(target.value)}
             type='number'
             placeholder='Quantidade'
@@ -65,6 +66,7 @@ function BuyOrSell() {
         <label>
           Vender:
           <input
+            data-testid='input-quantity-sell'
             placeholder='Quantidade'
             type='number'
             onChange={({ target }) => quantityHandler(target.value)}
@@ -73,9 +75,11 @@ function BuyOrSell() {
       </div>
 
       <button
+        data-testid='return-btn'
         onClick={() => returnBtn()}
       >Voltar</button>
       <button
+      data-testid='confirm-btn'
         onClick={() => confirmBtn()}
       >Confirmar</button>
 

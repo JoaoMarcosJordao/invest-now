@@ -29,6 +29,18 @@ describe('Testando a página de Login', () => {
     expect(acessBtn).toBeInTheDocument();
   });
 
+  it('A pessoa deve conseguir escrever o email', () => {
+    renderWithRouter(<App />);
+    const email = screen.getByTestId('input-email');
+    userEvent.type(email, 'alguem@trybe.com');
+  });
+
+  it('4- A pessoa deve conseguir escrever a senha', () => {
+    renderWithRouter(<App />);
+    const password = screen.getByTestId('input-password');
+    userEvent.type(password, '12345678');
+  });
+
   it ('Verifica se ao clicar no botao de acessar, vai para a página actions', () => {
     const { history } = renderWithRouter(<App />)
 
