@@ -83,7 +83,7 @@ function Login() {
           />
 
           {
-            invalid.password && <span className='invalid'>*Senha inválida*</span>
+            invalid.password && <span className='invalid'>*Senha no minimo 8 caracters</span>
           }
 
         </div>
