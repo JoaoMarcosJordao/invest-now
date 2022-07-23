@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import appContext from '../context/appContext';
 
+import { Title, Article, Table, Td, Button } from '../style-components/ActionsAvailable';
+
 function ActionsAvailable() {
 
   const [redirect, setRedirect] = useState(false);
@@ -21,43 +23,43 @@ function ActionsAvailable() {
 
   return (
     <>
-      <article>
-        <h4>Disponíveis para investir:</h4>
-        <table>
+      <Article>
+        <Title>Disponíveis para investir:</Title>
+        <Table>
           <thead>
             <tr>
-              <td>Ação</td>
-              <td>Qtde</td>
-              <td>Valor (R$)</td>
-              <td>Negociar</td>
+              <Td background='#DCDCDC'>Ação</Td>
+              <Td background='#DCDCDC'>Qtde</Td>
+              <Td background='#DCDCDC'>Valor (R$)</Td>
+              <Td background='#DCDCDC'>Negociar</Td>
             </tr>
           </thead>
           <tbody>
             {actions.map((action) => (
               <tr key={action.id}>
-                <td>{action.title}</td>
-                <td>{action.amount}</td>
-                <td>{action.price}</td>
-                <td>
-                  <button
+                <Td background='#DAA520'>{action.title}</Td>
+                <Td background='#C0C0C0'>{action.amount}</Td>
+                <Td background='#000000'>{action.price}</Td>
+                <Td>
+                  <Button background='#4169E1'
                     name={action.title}
                     data-testid='buy-btn'
                     onClick={({ target }) => buyBtn(target)}
                   >
                     C
-                  </button>
-                  <button
+                  </Button>
+                  <Button
                     data-testid='sell-btn'
                     disabled={true}
                   >
                     V
-                  </button>
-                </td>
+                  </Button>
+                </Td>
               </tr>
             ))}
           </tbody>
-        </table>
-      </article>
+        </Table>
+      </Article>
       {
         redirect && <Redirect push to='/buyorsell' />
       }

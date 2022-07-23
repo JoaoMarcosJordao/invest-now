@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import appContext from '../context/appContext';
+import { Table, Td, Button } from '../style-components/ActionsAvailable';
 
 
 function MyActions() {
@@ -23,40 +24,41 @@ function MyActions() {
 
   return (
     <>
-      <table>
+      <Table>
         <thead>
           <tr>
-            <td>Ação</td>
-            <td>Qtde</td>
-            <td>Valor (R$)</td>
+            <Td background='#DCDCDC'>Ação</Td>
+            <Td background='#DCDCDC'>Qtde</Td>
+            <Td background='#DCDCDC'>Valor (R$)</Td>
+            <Td background='#DCDCDC'>Negociar</Td>
           </tr>
         </thead>
         <tbody>
           {myActions.map((action) => (
             <tr key={action.title}>
-              <td>{action.title}</td>
-              <td>{action.quantity}</td>
-              <td>{action.price}</td>
-              <td>
-                <button
+              <Td background='#DAA520'>{action.title}</Td>
+              <Td background='#C0C0C0'>{action.quantity}</Td>
+              <Td background='#000000'>{action.price}</Td>
+              <Td>
+                <Button background='#4169E1'
                   name={action.title}
                   data-testid='buy-btn'
                   onClick={({ target }) => buyBtn(target)}
                 >
                   C
-                </button>
-                <button
-                  name={action.title}
+                </Button>
+                <Button background='#228B22'
                   data-testid='sell-btn'
                   onClick={() => sellBtn()}
+
                 >
                   V
-                </button>
-              </td>
+                </Button>
+              </Td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
       {
         redirect && <Redirect push to='/buyorsell' />
       }

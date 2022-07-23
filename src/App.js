@@ -1,4 +1,3 @@
-import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Actions from "./pages/Actions";
 import Login from './pages/Login'

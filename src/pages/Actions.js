@@ -5,6 +5,13 @@ import MyActions from '../components/MyActions';
 import appContext from '../context/appContext';
 import { Redirect } from 'react-router-dom';
 
+import {
+  Article,
+  Title,
+  Button,
+  ButtonContent,
+} from '../style-components/ActionsPage';
+
 
 function Actions() {
   const { myActions } = useContext(appContext);
@@ -17,20 +24,20 @@ function Actions() {
   return (
     <>
       <Header />
-      <article>
-        <h4>Minhas ações:</h4>
+      <Article>
+        <Title>Minhas ações:</Title>
         {
           myActions.length === 0
             ? <span>Você ainda nâo possui ações.</span>
             : <MyActions />
         }
-      </article>
+      </Article>
       <ActionsAvailable />
-      <div>
-        <button
+      <ButtonContent>
+        <Button
           onClick={redirectToDepositPage}
-        >Depósito/Retirada</button>
-      </div>
+        >Depósito/Retirada</Button>
+      </ButtonContent>
       {
         redirect && <Redirect push to='/deposit' />
       }
