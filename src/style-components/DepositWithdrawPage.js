@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const BalanceAccount = styled.div`
+  @media(max-width: 500px) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +24,12 @@ export const BalanceAccount = styled.div`
   font-weight: bolder;
 
   color: #000;
+  }
 `;
 
 export const ButtonDepWith = styled.button`
-  width: 45vw;
+  @media(max-width: 500px) {
+  width: 40vw;
   height: 40px;
 
   border: none;
@@ -39,14 +42,17 @@ export const ButtonDepWith = styled.button`
   font-size: 16px;
   font-weight: bolder;
 
-  background-color: ${ props => props.background };
+  background-color: ${props => props.background};
+  }
 
 `;
 
 export const InputContent = styled.div`
+  @media(max-width: 500px) {
   display: flex;
   justify-content: center;
   align-items: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -59,14 +65,14 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 45vw;
+  width: 40vw;
   height: 30px;
 
   border: none;
   border-radius: 10px;
 
   margin: 10px;
-  margin-top: 45vh;
+  margin-top: 40vh;
 
   color: white;
   font-size: 16px;
