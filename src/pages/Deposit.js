@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Redirect } from 'react-router-dom';
 
+import { BalanceAccount, Button, Input, InputContent, ButtonDepWith } from '../style-components/DepositWithdrawPage';
+
 function Deposit() {
   const [balanceAccount, setBalanceAccount] = useState(0);
   const [redirect, setRedirect] = useState(false);
@@ -30,34 +32,34 @@ function Deposit() {
     <>
       <Header />
 
-      <div>
+      <BalanceAccount>
         {showBalanceAccount()}
-      </div>
+      </BalanceAccount>
 
-      <button>Depósito</button>
+      <ButtonDepWith background='#228B22'>Depósito</ButtonDepWith>
 
-      <button
+      <ButtonDepWith background='#DCDCDC'
         disabled={true}
-      >Retirada</button>
+      >Retirada</ButtonDepWith>
 
-      <div>
-        <input
+      <InputContent>
+        <Input
           data-testid='input-deposit'
           placeholder='Informe o valor'
           type='number'
           onChange={({ target }) => handleChange(target.value)}
         />
-      </div>
+      </InputContent>
 
       <div>
-        <button
+        <Button
           onClick={() => redirectToDepositPage()}
         >Voltar
-        </button>
+        </Button>
 
-        <button
+        <Button
           onClick={() => confirmBtn()}
-        >Confirmar</button>
+        >Confirmar</Button>
       </div>
       {
         redirect && <Redirect push to='/actions' />

@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import emailValidation from '../utils/emailValidation';
 
+import {
+  LoginContainer,
+  Input, GlobalStyle, Button, LoginDiv,
+  Span,
+  Title,
+} from '../style-components/LoginPage';
+
 function Login() {
 
   const [email, setEmail] = useState('');
@@ -56,25 +63,22 @@ function Login() {
   }
 
   return (
-    <section>
-      <div>
+    <LoginContainer>
+      <GlobalStyle />
+      <Title>Invest Now</Title>
+      <LoginDiv>
         <div>
-          <input
+          <Input
             name='input-email'
             placeholder='Email'
             type='text'
             data-testid='input-email'
             onChange={({ target }) => handleChangeEmail(target)}
           />
-
-          {
-            invalid.email && <span className='invalid'>*Email inválido*</span>
-          }
-
         </div>
 
         <div>
-          <input
+          <Input
             name='input-password'
             placeholder='Senha'
             type='password'
@@ -82,32 +86,34 @@ function Login() {
             onChange={({ target }) => handleChangePassword(target)}
           />
 
-          {
-            invalid.password && <span className='invalid'>*Senha no minimo 8 caracters</span>
-          }
-
         </div>
 
+        {
+          invalid.email && <Span className='invalid'>Email inválido</Span>
+        }
+
+        {
+          invalid.password && <Span className='invalid'>Senha no mínimo 8 caracters</Span>
+        }
+
+
+        {
+          invalid.emailPassword && <Span className='invalid'>Email e senha inválidos</Span>
+        }
+
         <div>
-
-          {
-            invalid.emailPassword && <span className='invalid'>*Email e senha inválidos*</span>
-          }
-
-          <button
+          <Button
             data-testid='acess-btn'
             onClick={() => acessButtonClick()}
           >
             Acessar
-          </button>
+          </Button>
         </div>
-
         {
           redirect && <Redirect push to='/actions' />
         }
-
-      </div>
-    </section>
+      </LoginDiv>
+    </LoginContainer>
   );
 }
 
