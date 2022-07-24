@@ -23,8 +23,6 @@ Invest Now é uma simulação de uma aplicação Front-End, onde é simulado uma
 
   Para utilizar pelo computador, deverá se atentar em alguns pontos, nossa aplicação foi feita para dispositivies móveis e por esse motivo, inicialmete a tela irá ficar feia e distorcida, para conseguir acessar pelo computador é necessário abra o inspecionar clicando com o botão direito do mouse e selecione a opção " inspecionar " ou então pode apertar o botão f12 do seu teclado. <br/>
 
-  <image width='500px' height='600px'src='./public/images/Screenshot from 2022-07-24 13-30-31.png' alt='Tutorial inspecionar' />
-
   Agora com o inspecionar aberto, no cantinho superior esquerdo, tem um ícone de dispositivos móveis, clique nesse ícone. Caso a aplicação não tenha ficado parecido com as imagens exibidas acima, o inspecionar abre uma barra escrito " Dimensions: ", nesse campo você pode escolher qual o tipo de equipamento será exibido, então para um bom funcionamento recomendo que selecione " Iphone XR ". Agora deve estar tudo certo! <br/>
 
   <strong>Página de Login:</strong> <br/>
