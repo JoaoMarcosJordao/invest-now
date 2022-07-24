@@ -81,7 +81,7 @@ Acesse pelo SmartPhone: https://case-invest-now.herokuapp.com/
 </details>
 
 <details>
-  <summary><strong>Outras informações:</strong></summary><br />
+  <summary><strong>Outras informações</strong></summary><br />
 
   Este case me serviu de grande aprendizado e o maior deles não foi sobre códigos, foi como a gente se comporta em meios a desafios, pois estava enfrentando meu primeiro case real de processo seletivo e ser um candidato concorrendo a vaga com pessoas super capacitadas, durante essa ultima semana foi uma batalha emocional imensa, mas serviu para eu mostrar para mim mesmo que consigo controlar e aprender com minhas emoções, apesar de ter enfrentado alguns desafios de código que não consegui resolver e estar entregando o case com alguns detalhes que eu queria muito ter conseguido fazer. <br/>
 
