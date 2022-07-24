@@ -4,7 +4,7 @@ Invest Now é uma simulação de uma aplicação Front-End, onde é simulado uma
 
 <strong>O sistema é composto de 4 telas: Login, Ações, Compra/Venda e Depósito</strong>
 
-![](invest-now.gif)
+![](./public/images/invest-now.gif)
 
 
 <strong>Cobertura de Testes</strong>
