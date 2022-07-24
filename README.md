@@ -5,16 +5,16 @@ Invest Now é uma simulação de uma aplicação Front-End, onde é simulado uma
 <strong>O sistema é composto de 4 telas:</strong>
 
 <strong>Login:</strong> <br/>
-<image width='300px' height='400px' src='./public/images/Screenshot from 2022-07-24 12-18-52.png' alt='Página de Login' />
+<image width='300px' height='500px' src='./public/images/Screenshot from 2022-07-24 12-18-52.png' alt='Página de Login' />
 
 <strong>Ações:</strong> <br/>
-<image width='300px' height='400px' src='./public/images/Screenshot from 2022-07-24 12-12-01.png' alt='Página de acoes' />
+<image width='300px' height='500px' src='./public/images/Screenshot from 2022-07-24 12-12-01.png' alt='Página de acoes' />
 
 <strong>Compra/Venda:</strong> <br/>
-<image width='300px' height='400px' src='./public/images/Screenshot from 2022-07-24 12-53-08.png' alt='Página de compra e venda'  />
+<image width='300px' height='500px' src='./public/images/Screenshot from 2022-07-24 12-53-08.png' alt='Página de compra e venda'  />
 
 <strong>Depósito</strong> <br/>
-<image width='300px' height='400px' src='./public/images/Screenshot from 2022-07-24 12-18-14.png' alt='Página de compra e venda'  />
+<image width='300px' height='500px' src='./public/images/Screenshot from 2022-07-24 12-18-14.png' alt='Página de compra e venda'  />
 
 <details>
   <summary><strong>🤷🏽‍♀️ Como utilizar</strong></summary><br />
