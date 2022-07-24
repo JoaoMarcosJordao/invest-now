@@ -22,6 +22,8 @@ Acesse pelo SmartPhone: https://case-invest-now.herokuapp.com/
 
   Agora com o inspecionar aberto, no cantinho superior esquerdo, tem um ícone de dispositivos móveis, clique nesse ícone. Caso a aplicação não tenha ficado parecido com as imagens exibidas acima, o inspecionar abre uma barra escrito " Dimensions: ", nesse campo você pode escolher qual o tipo de equipamento será exibido, então para um bom funcionamento recomendo que selecione " Iphone XR ". Agora deve estar tudo certo! <br/>
 
+  ![](./public/images/tutor.gif)
+
   <strong>Página de Login:</strong> <br/>
   Na tela de Login, é necessário inserir um email no formato ' alguem@email.com'. <br/>
   Na tela de Login, é necessário inserir uma senha de pelo menos 8 caracteres. <br/>
