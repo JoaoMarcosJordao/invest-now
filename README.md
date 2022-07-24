@@ -2,6 +2,8 @@
 
 Invest Now é uma simulação de uma aplicação Front-End, onde é simulado uma sistema de ações.
 
+Acesse pelo SmartPhone: https://case-invest-now.herokuapp.com/
+
 <strong>O sistema é composto de 4 telas: Login, Ações, Compra/Venda e Depósito</strong>
 
 ![](./public/images/invest-now.gif)
